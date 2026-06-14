@@ -1040,6 +1040,49 @@
       background: radial-gradient(circle at 50% 0%, rgba(59,130,246,0.15) 0%, transparent 60%);
       pointer-events: none; z-index: 1;
     }
+    
+    /* Case Studies New Visual Layout */
+    .case {
+      display: grid !important;
+      grid-template-columns: 1fr 320px;
+      gap: 30px;
+      align-items: center;
+    }
+    .case-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .case-visual {
+      width: 100%;
+      height: 100%;
+      min-height: 240px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      background: var(--bg-2);
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .case-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .case:hover .case-visual img {
+      transform: scale(1.08);
+    }
+    @media(max-width:900px) {
+      .case {
+        grid-template-columns: 1fr !important;
+      }
+      .case-visual {
+        min-height: 200px;
+        order: -1;
+      }
+    }
     nav {
       background: rgba(3, 7, 18, 0.7);
       backdrop-filter: blur(20px);
@@ -1129,7 +1172,7 @@
     </div>
     <div class="wrap">
       <span class="eyebrow"><span class="ping"></span> Full-Stack Data &amp; Analytics · AI-Powered Insights</span>
-      <h1>I turn complex data into<br><span class="gradient-text">decisions people trust.</span></h1>
+      <h1>Hi, I am Harsh.<br>I turn complex data into <span class="gradient-text">decisions people trust.</span></h1>
       <div class="sub">Harsh Raj Singh — Senior Data Analyst &amp; Full-Stack Data Professional</div>
       <p class="lead">6+ years engineering the pipelines, models, and AI-driven self-serve workflows that put trusted
         insights in decision-makers' hands — in days, not weeks.</p>
@@ -1344,6 +1387,34 @@
     </div>
   </section>
 
+  <section id="education" style="background:linear-gradient(180deg,transparent,rgba(6,182,212,.03),transparent);">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">Academic Background</div>
+        <h2>Foundation in Engineering & Systems</h2>
+        <p>Combining rigorous engineering principles with modern data analytics techniques.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl reveal">
+          <div class="top">
+            <h3>Master of Engineering, Electrical &amp; Computer Engineering · <span class="co">UBC</span></h3><span class="when">Sep 2019 – Dec 2020 · Vancouver, Canada</span>
+          </div>
+          <ul>
+            <li><b>University of British Columbia</b> | GPA: 3.93/4.00</li>
+          </ul>
+        </div>
+        <div class="tl reveal">
+          <div class="top">
+            <h3>Bachelor of Technology (Honors), Electrical Engineering · <span class="co">NIT Raipur</span></h3><span class="when">Aug 2014 – May 2018 · Raipur, India</span>
+          </div>
+          <ul>
+            <li><b>National Institute of Technology</b> | CPI: 9.55/10.00</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="work" style="background:linear-gradient(180deg,transparent,rgba(79,140,255,.04),transparent);">
     <div class="wrap">
       <div class="sec-head reveal">
@@ -1354,98 +1425,153 @@
       <div class="cases">
 
         <div class="case reveal">
-          <div class="case-head"><span class="case-num">01</span>
-            <h3>Agentic Just-in-Time Self-Serve Analytics</h3><span class="metric-badge">75% ↓ requests</span>
+          <div class="case-content">
+            <div class="case-head"><span class="case-num">01</span>
+              <h3>Agentic Just-in-Time Self-Serve Analytics</h3><span class="metric-badge">75% ↓ requests</span>
+            </div>
+            <div class="pts-grid">
+              <div class="pts">
+                <div class="l">◆ Problem</div>
+                <p>Business teams waited days — sometimes weeks — on the analytics team for every new dashboard or data question, creating a bottleneck that slowed decisions across GTM, Sales, and Product.</p>
+              </div>
+              <div class="pts">
+                <div class="l">◆ Tools</div>
+                <p>Claude, BigQuery MCP, reusable Claude Skills, dbt-modeled data, governance &amp; compliance guardrails.</p>
+              </div>
+              <div class="pts">
+                <div class="l">◆ Solution</div>
+                <p>Built reusable, governed skills connecting Claude to BigQuery via MCP — guiding users from a plain-language question to a trusted insight, with compliance rules and an automatic audit trail on every answer.</p>
+              </div>
+              <div class="pts impact">
+                <div class="l">◆ Impact</div>
+                <p>Teams now self-generate critical insights in a day instead of waiting on Analytics — reducing analytics inbound requests by <b>~75%</b> and freeing the team for higher-value work.</p>
+              </div>
+            </div>
+            <div class="case-tags"><span class="ctag">Claude</span><span class="ctag">BigQuery MCP</span><span class="ctag">Skill Development</span><span class="ctag">Governance</span><span class="ctag">Self-Serve Analytics</span></div>
           </div>
-          <div class="pts-grid">
-            <div class="pts">
-              <div class="l">◆ Problem</div>
-              <p>Business teams waited days — sometimes weeks — on the analytics team for every new dashboard or data
-                question, creating a bottleneck that slowed decisions across GTM, Sales, and Product.</p>
-            </div>
-            <div class="pts">
-              <div class="l">◆ Tools</div>
-              <p>Claude, BigQuery MCP, reusable Claude Skills, dbt-modeled data, governance &amp; compliance guardrails.
-              </p>
-            </div>
-            <div class="pts">
-              <div class="l">◆ Solution</div>
-              <p>Built reusable, governed skills connecting Claude to BigQuery via MCP — guiding users from a
-                plain-language question to a trusted insight, with compliance rules and an automatic audit trail on
-                every answer.</p>
-            </div>
-            <div class="pts impact">
-              <div class="l">◆ Impact</div>
-              <p>Teams now self-generate critical insights in a day instead of waiting on Analytics — reducing analytics
-                inbound requests by <b>~75%</b> and freeing the team for higher-value work.</p>
-            </div>
-          </div>
-          <div class="case-tags"><span class="ctag">Claude</span><span class="ctag">BigQuery MCP</span><span
-              class="ctag">Skill Development</span><span class="ctag">Governance</span><span class="ctag">Self-Serve
-              Analytics</span></div>
-        </div>
-
-        <div class="case reveal">
-          <div class="case-head"><span class="case-num">02</span>
-            <h3>Automated Executive Reporting Pipeline</h3><span class="metric-badge">Daily, hands-off</span>
-          </div>
-          <div class="pts-grid">
-            <div class="pts">
-              <div class="l">◆ Problem</div>
-              <p>Senior leadership needed a current, reliable view of key metrics every morning — but assembling it was
-                a manual, repetitive process prone to delay.</p>
-            </div>
-            <div class="pts">
-              <div class="l">◆ Tools</div>
-              <p>Cursor, BigQuery MCP, Slack MCP, dbt data models, Apps Script (web-hosted HTML dashboard).</p>
-            </div>
-            <div class="pts">
-              <div class="l">◆ Solution</div>
-              <p>Designed an agentic workflow in Cursor that reads dbt-modeled BigQuery tables, refreshes a live
-                dashboard each morning, drafts a customized Slack highlights message, and shares the live link — all
-                from a finalized, iterated template.</p>
-            </div>
-            <div class="pts impact">
-              <div class="l">◆ Impact</div>
-              <p>Replaced a manual reporting cycle with a <b>fully automated daily refresh</b> — leadership opens
-                up-to-date metrics and curated highlights every morning, with zero analyst effort.</p>
-            </div>
-          </div>
-          <div class="case-tags"><span class="ctag">Cursor</span><span class="ctag">BigQuery MCP</span><span
-              class="ctag">Slack MCP</span><span class="ctag">Apps Script</span><span class="ctag">Automation</span>
+          <div class="case-visual">
+            <img src="assets/case_01_agentic_analytics_1781457604425.png" alt="Agentic Analytics Visualization">
           </div>
         </div>
 
         <div class="case reveal">
-          <div class="case-head"><span class="case-num">03</span>
-            <h3>Secure Enterprise Data Exchange &amp; Governance</h3><span class="metric-badge">Governed sharing</span>
+          <div class="case-content">
+            <div class="case-head"><span class="case-num">02</span>
+              <h3>Automated Executive Reporting Pipeline</h3><span class="metric-badge">Daily, hands-off</span>
+            </div>
+            <div class="pts-grid">
+              <div class="pts">
+                <div class="l">◆ Problem</div>
+                <p>Senior leadership needed a current, reliable view of key metrics every morning — but assembling it was a manual, repetitive process prone to delay.</p>
+              </div>
+              <div class="pts">
+                <div class="l">◆ Tools</div>
+                <p>Cursor, BigQuery MCP, Slack MCP, dbt data models, Apps Script (web-hosted HTML dashboard).</p>
+              </div>
+              <div class="pts">
+                <div class="l">◆ Solution</div>
+                <p>Designed an agentic workflow in Cursor that reads dbt-modeled BigQuery tables, refreshes a live dashboard each morning, drafts a customized Slack highlights message, and shares the live link — all from a finalized, iterated template.</p>
+              </div>
+              <div class="pts impact">
+                <div class="l">◆ Impact</div>
+                <p>Replaced a manual reporting cycle with a <b>fully automated daily refresh</b> — leadership opens up-to-date metrics and curated highlights every morning, with zero analyst effort.</p>
+              </div>
+            </div>
+            <div class="case-tags"><span class="ctag">Cursor</span><span class="ctag">BigQuery MCP</span><span class="ctag">Slack MCP</span><span class="ctag">Apps Script</span><span class="ctag">Automation</span></div>
           </div>
-          <div class="pts-grid">
-            <div class="pts">
-              <div class="l">◆ Problem</div>
-              <p>Enterprise clients wanted visibility into their own usage analytics, while internal account teams
-                needed strict, role-based access boundaries to the same data.</p>
-            </div>
-            <div class="pts">
-              <div class="l">◆ Tools</div>
-              <p>dbt post-hooks, row-level security (RLS), Google Cloud Storage (GCS), BigQuery, partnership with
-                Infrastructure.</p>
-            </div>
-            <div class="pts">
-              <div class="l">◆ Solution</div>
-              <p>Used dbt post-hooks to enforce RLS for account-team access and to write curated outputs to a GCS bucket
-                — then partnered with Infra to operationalize it as a secure data-exchange serving enterprise clients.
-              </p>
-            </div>
-            <div class="pts impact">
-              <div class="l">◆ Impact</div>
-              <p>Enabled <b>governed, self-service data sharing</b> with enterprise customers while enforcing strict
-                internal access control — turning analytics into a client-facing value-add.</p>
-            </div>
+          <div class="case-visual">
+            <img src="assets/case_02_executive_reporting_1781457614517.png" alt="Automated Executive Reporting">
           </div>
-          <div class="case-tags"><span class="ctag">dbt Post-Hooks</span><span class="ctag">Row-Level
-              Security</span><span class="ctag">GCS</span><span class="ctag">BigQuery</span><span class="ctag">Data
-              Governance</span></div>
+        </div>
+
+        <div class="case reveal">
+          <div class="case-content">
+            <div class="case-head"><span class="case-num">03</span>
+              <h3>Secure Enterprise Data Exchange &amp; Governance</h3><span class="metric-badge">Governed sharing</span>
+            </div>
+            <div class="pts-grid">
+              <div class="pts">
+                <div class="l">◆ Problem</div>
+                <p>Enterprise clients wanted visibility into their own usage analytics, while internal account teams needed strict, role-based access boundaries to the same data.</p>
+              </div>
+              <div class="pts">
+                <div class="l">◆ Tools</div>
+                <p>dbt post-hooks, row-level security (RLS), Google Cloud Storage (GCS), BigQuery.</p>
+              </div>
+              <div class="pts">
+                <div class="l">◆ Solution</div>
+                <p>Used dbt post-hooks to enforce RLS for account-team access and to write curated outputs to a GCS bucket — then partnered with Infra to operationalize it as a secure data-exchange serving enterprise clients.</p>
+              </div>
+              <div class="pts impact">
+                <div class="l">◆ Impact</div>
+                <p>Enabled <b>governed, self-service data sharing</b> with enterprise customers while enforcing strict internal access control — turning analytics into a client-facing value-add.</p>
+              </div>
+            </div>
+            <div class="case-tags"><span class="ctag">dbt Post-Hooks</span><span class="ctag">Row-Level Security</span><span class="ctag">GCS</span><span class="ctag">BigQuery</span><span class="ctag">Data Governance</span></div>
+          </div>
+          <div class="case-visual">
+            <img src="assets/case_03_data_exchange_1781457624855.png" alt="Enterprise Data Exchange">
+          </div>
+        </div>
+
+        <div class="case reveal">
+          <div class="case-content">
+            <div class="case-head"><span class="case-num">04</span>
+              <h3>Engagement &amp; Revenue Analytics</h3><span class="metric-badge">Strategic ROI</span>
+            </div>
+            <div class="pts-grid">
+              <div class="pts">
+                <div class="l">◆ Problem</div>
+                <p>Leadership lacked unified visibility into how user engagement metrics connected to actual subscription economics and overall ARR growth.</p>
+              </div>
+              <div class="pts">
+                <div class="l">◆ Tools</div>
+                <p>Looker, BigQuery, dbt, Salesforce AI, Advanced SQL.</p>
+              </div>
+              <div class="pts">
+                <div class="l">◆ Solution</div>
+                <p>Built comprehensive revenue models integrating token-based subscription economics (cost-to-serve, revenue per token, gross/net margin, CLTV) with deep engagement analytics (dwell time, session length, high-value adoption).</p>
+              </div>
+              <div class="pts impact">
+                <div class="l">◆ Impact</div>
+                <p>Provided the C-suite with a unified dashboard to track <b>ARR, CLTV, and cohort performance</b>, driving more precise resource allocation and GTM strategies.</p>
+              </div>
+            </div>
+            <div class="case-tags"><span class="ctag">Revenue Analytics</span><span class="ctag">CLTV</span><span class="ctag">ARR</span><span class="ctag">Looker</span><span class="ctag">Salesforce AI</span></div>
+          </div>
+          <div class="case-visual">
+            <img src="assets/case_04_revenue_analytics_1781457634574.png" alt="Revenue Analytics Visualization">
+          </div>
+        </div>
+
+        <div class="case reveal">
+          <div class="case-content">
+            <div class="case-head"><span class="case-num">05</span>
+              <h3>Customer Segmentation &amp; Sentiment NLP</h3><span class="metric-badge">Targeted ROI</span>
+            </div>
+            <div class="pts-grid">
+              <div class="pts">
+                <div class="l">◆ Problem</div>
+                <p>Marketing and product teams struggled to identify distinct purchasing patterns or systematically extract actionable signals from unstructured customer feedback.</p>
+              </div>
+              <div class="pts">
+                <div class="l">◆ Tools</div>
+                <p>Python (Pandas, scikit-learn, NLTK), LookML, BigQuery, Google Colab.</p>
+              </div>
+              <div class="pts">
+                <div class="l">◆ Solution</div>
+                <p>Engineered LookML data models for advanced cohort analysis, while simultaneously deploying NLP models to perform sentiment analysis on thousands of customer reviews.</p>
+              </div>
+              <div class="pts impact">
+                <div class="l">◆ Impact</div>
+                <p>Enabled highly targeted marketing campaigns via distinct segmentation, and directly guided product quality improvements by spotlighting <b>critical sentiment trends</b>.</p>
+              </div>
+            </div>
+            <div class="case-tags"><span class="ctag">Python</span><span class="ctag">NLP</span><span class="ctag">Sentiment Analysis</span><span class="ctag">LookML</span><span class="ctag">Segmentation</span></div>
+          </div>
+          <div class="case-visual">
+            <img src="assets/case_05_marketing_optimization_1781457645025.png" alt="Marketing Optimization Visualization">
+          </div>
         </div>
 
       </div>
